@@ -78,7 +78,7 @@ export default function WorkflowsRequestOpt() {
         </Grid>
       </Card>
       <Card sx={{ mt: 1, p:{ xs:2, sm:3, md:3 } }}>
-      <Typography variant="h5" >
+      <Typography variant="h5" sx={{  textAlign: { xs:'center', sm:'left'  } }}>
           Job Information
         </Typography>
         <Grid item container xs={12} sx={{ mt:2 }}>
