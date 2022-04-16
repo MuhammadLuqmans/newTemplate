@@ -1,8 +1,15 @@
 import { Alert, Card, Grid, Typography, Button } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import WorkflowParticipant from "../WorkflowParticipant";
 
 export default function WorkflowsRequestOpt() {
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
   return (
     <Box>
       <Alert severity="info" sx={{ fontSize:{ xs:16 , sm:18 },m:{ xs:1, sm:0 } }}>
@@ -71,9 +78,10 @@ export default function WorkflowsRequestOpt() {
             >
               Effective Date 03 June 2021
             </Typography>
-            <Button variant="text" sx={{ fontWeight:'bold' , color:'#f9a11c' }} >
+            <Button variant="text" onClick={handleOpen} sx={{ fontWeight:'bold' , color:'#f9a11c' }} >
               View WorkFlow Participant
             </Button>
+            <WorkflowParticipant  HandleOpen={handleOpen} Open={open} handleClose={handleClose} />
           </Grid>
         </Grid>
       </Card>
